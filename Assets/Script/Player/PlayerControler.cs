@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -9,9 +12,11 @@ public class PlayerControler : MonoBehaviour
     [Header("Settings")]
     public bool isFirstPerson = false;
     public bool IsJumping = false;
+    public bool IsInteract = false;
 
     [Header("References")]
     public FirstPersonCamera firstPersonCamera;
+    public Telekinesis1 telekinesis;
     //public ThirdPersonCamera thirdPersonCamera;
     //public Animator animator;
 
@@ -29,6 +34,14 @@ public class PlayerControler : MonoBehaviour
         moveInputValue = value.Get<Vector2>();
     }
 
+    public void OnInteract(InputValue value)
+    {
+        if (!IsInteract)
+        {
+            IsInteract = value.isPressed;
+        }
+    }
+
     public void OnJump(InputValue value)
     {
         if (!IsJumping)
@@ -37,8 +50,8 @@ public class PlayerControler : MonoBehaviour
             if (IsJumping)
             {
                 //animator.SetBool(Animator.StringToHash("IsJumping"), IsJumping);
-                StartCoroutine(AnimJumpDelay(0.5f));
-                StartCoroutine(ResetJumpAfterDelay(1.5f));
+                StartCoroutine(AnimJumpDelay(0.1f));
+                StartCoroutine(ResetJumpAfterDelay(0.2f));
             }
         }
     }
@@ -80,6 +93,7 @@ public class PlayerControler : MonoBehaviour
 
         Vector3 velocity = x + z;
         character.Move(velocity * Time.deltaTime);
+        telekinesis.ButtonPress = IsInteract;
         //float AnimSpeed = velocity.magnitude;
         //AnimSpeed = Mathf.Clamp(AnimSpeed, 0.0f, 1.0f);
         //animator.SetFloat(Animator.StringToHash("Speed"), AnimSpeed);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6422277082412840655}
   - component: {fileID: 2496996678999574604}
   - component: {fileID: 2662738742242252696}
+  - component: {fileID: -3747726551858034416}
   m_Layer: 0
   m_Name: Boite_jouet1
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1348523578563016291, guid: 8e810aa3d40e57d4585c50fd1385a73b, type: 3}
+  - {fileID: 2100000, guid: 74adf2ea2a6f57946b2bbf23b95864ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,3 +87,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3747726551858034416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282225013374020819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9b335213f414b4291fb658585da66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemType: 
+  DifficultyType: 1
+  anomalyAction: {fileID: 11400000, guid: 3524d53ab1cb3ac4a9940c4eaaf3be4d, type: 2}
+  isAnomaly: 0
+  anomalyMaterial: {fileID: 2100000, guid: 74adf2ea2a6f57946b2bbf23b95864ae, type: 2}
+  definedPosition: {x: 0, y: 0, z: 0}
+  definedRotation: {x: 0, y: 0, z: 0, w: 0}
+  definedScale: {x: 1, y: 1, z: 1}

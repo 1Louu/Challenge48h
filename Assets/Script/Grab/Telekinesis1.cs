@@ -1,7 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Telekinesis : MonoBehaviour
+public class Telekinesis1 : MonoBehaviour
 {
     public Transform holdPosition;
     public float grabSpeed = 10f;
@@ -9,10 +10,12 @@ public class Telekinesis : MonoBehaviour
     public float raycastDistance = 3f;
 
     private Rigidbody grabbedObject;
+    public bool ButtonPress = false;
     private bool isGrabbing = false;
     public bool isThrowing = false;
     public Character character;
-    public Animator animator;
+    public PlayerControler playerControler;
+    //public Animator animator;
     void Start()
     {
         
@@ -27,31 +30,34 @@ public class Telekinesis : MonoBehaviour
     [System.Obsolete]
     public void HandleInteraction()
     {
+        if (ButtonPress)
         {
-            if (Input.GetKeyDown(KeyCode.E))
             {
-                RaycastHit hit;
-                Ray ray = character.PlayerCamera.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hit, raycastDistance))
                 {
-                    if (hit.collider.CompareTag("Grabbable"))
+                    Debug.Log("Test");
+                    RaycastHit hit;
+                    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0, 0, 0));
+                    if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, raycastDistance))
                     {
-                        TryGrabObject(hit.collider.gameObject);
+                        Debug.DrawRay(ray.direction, hit.point, Color.yellow);
+                        if (hit.collider.CompareTag("Anomaly"))
+                        {
+                            TryGrabObject(hit.collider.gameObject);
+                        }
+                    }
+
+                    if (isGrabbing && grabbedObject != null)
+                    {
+                        MoveObjectToHoldPosition();
+                    }
+
+                    if (ButtonPress && isGrabbing)
+                    {
+                        //animator.SetBool("IsThrowing", true);
+                        StartCoroutine(AnimThrowDelay(0.8f));
+                        StartCoroutine(ResetThrowingAfterDelay(1.5f));
                     }
                 }
-            }
-
-            if (isGrabbing && grabbedObject != null)
-            {
-                MoveObjectToHoldPosition();
-            }
-
-            if (Input.GetKeyUp(KeyCode.E) && isGrabbing)
-            {
-                animator.SetBool("IsThrowing", true);
-                StartCoroutine(AnimThrowDelay(0.8f));
-                StartCoroutine(ResetThrowingAfterDelay(1.5f));
             }
         }
     }
@@ -93,7 +99,9 @@ public class Telekinesis : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         isThrowing = false;
-        animator.SetBool(Animator.StringToHash("IsThrowing"), isThrowing);
+        playerControler.IsInteract = false;
+        ButtonPress = false;
+        //animator.SetBool(Animator.StringToHash("IsThrowing"), isThrowing);
     }
 
     [System.Obsolete]

@@ -49,9 +49,4 @@ public class Item : MonoBehaviour
         this.gameObject.tag= "Anomaly";
         anomalyAction.Execute(this);
     }
-
-    public void ChangeText(float newValue)
-    {
-        this.anomalyMaterial.SetFloat("_TextureBlending", newValue);
-    }
 }

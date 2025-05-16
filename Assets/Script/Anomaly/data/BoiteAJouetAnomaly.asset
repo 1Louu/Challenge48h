@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: BoiteAJouetAnomaly
   m_EditorClassIdentifier: 
   TextureBlending: 1
+  Hue: 0.2
