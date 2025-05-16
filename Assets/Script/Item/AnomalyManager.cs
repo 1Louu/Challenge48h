@@ -5,7 +5,7 @@ public class AnomalyManager : ItemManager
     private float anomalyTimer; 
     public float anomalyInterval = 15;
     public int difficulty = 1;
-
+    public Character character; 
     public ItemManager nonAnomaly;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +22,11 @@ public class AnomalyManager : ItemManager
             anomalyTimer = anomalyInterval * difficulty;
             AnomalyGeneration();
             Debug.Log("Anomaly insert");
-        }    
+            if (Items.Count > 0)
+            {
+                character.LooseLife();
+            }
+        }
     }
 
     public void AnomalyGeneration()
@@ -33,5 +37,10 @@ public class AnomalyManager : ItemManager
             item.SetAnomaly(); 
             Items.Add(item);
         }
+    }
+
+    public void RemoveAnomaly(Item item)
+    {
+        Items.Remove(item);
     }
 }

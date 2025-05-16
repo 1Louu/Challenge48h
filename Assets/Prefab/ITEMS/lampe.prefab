@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7168203914973358800}
   - component: {fileID: 5729369630997642458}
   - component: {fileID: 6760127042173251962}
+  - component: {fileID: 5149762136389894232}
   m_Layer: 0
   m_Name: lampe
-  m_TagString: Untagged
+  m_TagString: Anomaly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5955844840416208063, guid: 8e810aa3d40e57d4585c50fd1385a73b, type: 3}
+  - {fileID: 2100000, guid: 74adf2ea2a6f57946b2bbf23b95864ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,13 +100,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9b335213f414b4291fb658585da66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  itemType: 
-  DifficultyType: 0
-  anomalyAction: {fileID: 0}
-  isAnomaly: 0
-  anomalySelfTest: 0
-  anomalyMaterial: {fileID: 0}
-  definedPosition: {x: 0, y: 0, z: 0}
+  DifficultyType: 1
+  anomalyAction: {fileID: 11400000, guid: 6eab54faaca65e846ae601bb49e4fc3e, type: 2}
+  isAnomaly: 1
+  anomalyMaterial: {fileID: 2100000, guid: 74adf2ea2a6f57946b2bbf23b95864ae, type: 2}
+  definedPosition: {x: 6.032, y: 5.17, z: -1.557}
   definedRotation: {x: 0, y: 0, z: 0, w: 0}
-  definedScale: {x: 0, y: 0, z: 0}
+  definedScale: {x: 1, y: 1, z: 1}
+--- !u!54 &5149762136389894232
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112593839182888120}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
