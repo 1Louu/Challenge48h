@@ -4,7 +4,7 @@ using UnityEngine;
 public class AnomalyFloat : AnomalyAction
 {
     
-    public override void Execute(Item Me)
+    public override void Execute(Item me)
     {
         
     }
