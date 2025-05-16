@@ -18,14 +18,11 @@ public class ItemManager : MonoBehaviour
         
     }
 
-    public Item RandomItemPick(int pickedDiff)
+    public Item RandomItemPick()
     {
         List<Item> newItem = new List<Item>(); 
         foreach(Item item in Items)
-            if (item.DifficultyType == pickedDiff)
-            {
                 newItem.Add(item);
-            }
 
         if (newItem.Count == 0)
             return null;
