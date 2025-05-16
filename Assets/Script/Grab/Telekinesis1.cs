@@ -40,7 +40,7 @@ public class Telekinesis1 : MonoBehaviour
                     if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, raycastDistance))
                     {
                         Debug.DrawRay(ray.direction, hit.point, Color.yellow);
-                        if (hit.collider.CompareTag("Grabbable"))
+                        if (hit.collider.CompareTag("Anomaly"))
                         {
                             TryGrabObject(hit.collider.gameObject);
                         }
