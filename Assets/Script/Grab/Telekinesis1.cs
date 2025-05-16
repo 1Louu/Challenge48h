@@ -32,39 +32,24 @@ public class Telekinesis1 : MonoBehaviour
     [System.Obsolete]
     public void HandleInteraction()
     {
-        if (ButtonPress)
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
+            Debug.Log("Pressed");
+            RaycastHit hit;
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0, 0, 0));
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, raycastDistance))
             {
+                Debug.DrawRay(ray.direction, hit.point, Color.yellow);
+                if (hit.collider.CompareTag("Anomaly"))
                 {
-                    RaycastHit hit;
-                    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0, 0, 0));
-                    if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, raycastDistance))
-                    {
-                        Debug.DrawRay(ray.direction, hit.point, Color.yellow);
-                        if (hit.collider.CompareTag("Anomaly"))
-                        {
-                            Item var = hit.collider.gameObject.GetComponent<Item>();
-                            var.PickUp(); 
-                            anomalyManager.RemoveAnomaly(var);
-                        }
+                    Item var = hit.collider.gameObject.GetComponent<Item>();
+                    var.PickUp(); 
+                    anomalyManager.RemoveAnomaly(var);
+                }
 
-                        if (hit.collider.CompareTag("normal"))
-                        {
-                            character.LooseLife();
-                        }
-                    }
-
-                    if (isGrabbing && grabbedObject != null)
-                    {
-                        MoveObjectToHoldPosition();
-                    }
-
-                    if (ButtonPress && isGrabbing)
-                    {
-                        //animator.SetBool("IsThrowing", true);
-                        StartCoroutine(AnimThrowDelay(0.8f));
-                        StartCoroutine(ResetThrowingAfterDelay(1.5f));
-                    }
+                if (hit.collider.CompareTag("normal"))
+                {
+                    character.LooseLife();
                 }
             }
         }
