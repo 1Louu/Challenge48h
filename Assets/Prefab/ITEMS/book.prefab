@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4764903660513651857}
   m_Layer: 0
   m_Name: book
-  m_TagString: Untagged
+  m_TagString: Anomaly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   itemType: Book
   DifficultyType: 1
   anomalyAction: {fileID: 11400000, guid: f8e1e8434ce24a7458054739c3d89da3, type: 2}
-  isAnomaly: 0
+  isAnomaly: 1
   anomalyMaterial: {fileID: 2100000, guid: 74adf2ea2a6f57946b2bbf23b95864ae, type: 2}
   definedPosition: {x: 0, y: 0, z: 0}
   definedRotation: {x: 0, y: 0, z: 0, w: 0}
