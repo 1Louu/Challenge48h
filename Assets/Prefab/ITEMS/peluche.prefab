@@ -47,8 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9b335213f414b4291fb658585da66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Doudou
-  itemType: Pluchies
   DifficultyType: 1
   anomalyAction: {fileID: 11400000, guid: 0640be16c8d72f549b66e500ac7c249c, type: 2}
   isAnomaly: 1

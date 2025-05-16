@@ -15,4 +15,9 @@ public class Character : MonoBehaviour
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
+
+    public void LooseLife()
+    {
+        
+    }
 }

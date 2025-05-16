@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7168203914973358800}
   - component: {fileID: 5729369630997642458}
   - component: {fileID: 6760127042173251962}
-  - component: {fileID: 5463138476600202023}
   - component: {fileID: 5149762136389894232}
   m_Layer: 0
   m_Name: lampe
@@ -101,8 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9b335213f414b4291fb658585da66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Lampe
-  itemType: Lamp
   DifficultyType: 1
   anomalyAction: {fileID: 11400000, guid: 6eab54faaca65e846ae601bb49e4fc3e, type: 2}
   isAnomaly: 1
@@ -110,28 +107,6 @@ MonoBehaviour:
   definedPosition: {x: 6.032, y: 5.17, z: -1.557}
   definedRotation: {x: 0, y: 0, z: 0, w: 0}
   definedScale: {x: 1, y: 1, z: 1}
---- !u!64 &5463138476600202023
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112593839182888120}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -245266456209707876, guid: 8e810aa3d40e57d4585c50fd1385a73b, type: 3}
 --- !u!54 &5149762136389894232
 Rigidbody:
   m_ObjectHideFlags: 0

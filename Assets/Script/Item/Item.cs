@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     [Header("Anomaly")]
     public AnomalyAction anomalyAction;
     public bool isAnomaly;
+    public bool isDuplicat=false; 
     public Material anomalyMaterial;
     private float hueslide=0; 
     
@@ -36,17 +37,6 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void PickUp()
-    {
-        if (this.isAnomaly)
-        {
-            
-        }
-        // Player.LooseSanity()
-        // Play animationPickup here
-        
-    }
-
     // ReSharper disable Unity.PerformanceAnalysis
     public void SetAnomaly()
     {
@@ -54,5 +44,14 @@ public class Item : MonoBehaviour
         this.isAnomaly = true;
         this.gameObject.tag= "Anomaly";
         anomalyAction.Execute(this);
+    }
+
+    public void PickUp()
+    {
+        this.isAnomaly = false;
+        if (isDuplicat)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -102,8 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9b335213f414b4291fb658585da66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cadre Photo
-  itemType: Picture
   DifficultyType: 1
   anomalyAction: {fileID: 11400000, guid: 6b073a4b23d2db14b98c8df9e9ca85a8, type: 2}
   isAnomaly: 1
