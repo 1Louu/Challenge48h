@@ -46,6 +46,7 @@ public class Item : MonoBehaviour
     public void SetAnomaly()
     {
         this.isAnomaly = true;
+        this.gameObject.tag= "Anomaly";
         anomalyAction.Execute(this);
     }
 
