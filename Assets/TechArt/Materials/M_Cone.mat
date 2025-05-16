@@ -50,12 +50,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Hue: 0.9636354
+    - _Hue: 0.47588632
     - _Metalness: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Roughness: 0.5
-    - _TextureBlending: 0
+    - _TextureBlending: 1
     m_Colors:
     - _Emissive: {r: 0, g: 0, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}

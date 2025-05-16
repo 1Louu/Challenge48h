@@ -5,6 +5,7 @@ public class Character : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed = 1f;
+    public int life = 3;
     public Camera PlayerCamera;
     public void Move(Vector3 velocity)
     {
@@ -18,6 +19,10 @@ public class Character : MonoBehaviour
 
     public void LooseLife()
     {
-        
+        life--;
+        if (life <= 0)
+        {
+            
+        }
     }
 }
