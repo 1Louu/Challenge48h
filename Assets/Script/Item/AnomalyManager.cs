@@ -31,7 +31,7 @@ public class AnomalyManager : ItemManager
 
     public void AnomalyGeneration()
     {
-        Item item = this.nonAnomaly.RandomItemPick(1);
+        Item item = this.nonAnomaly.RandomItemPick();
         if (item)
         {
             item.SetAnomaly(); 

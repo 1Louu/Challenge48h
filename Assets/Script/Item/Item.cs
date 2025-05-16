@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     public AnomalyAction anomalyAction;
     public bool isAnomaly;
     public bool isDuplicat=false; 
-    public Material anomalyMaterial;
+    public Material Material;
     private float hueslide=0; 
     
     [Header("Definied Basis")]
@@ -33,7 +33,7 @@ public class Item : MonoBehaviour
             this.hueslide += Time.deltaTime/10;
             if (this.hueslide >= 1)
                 hueslide = 0;
-            this.anomalyMaterial.SetFloat("_Hue", this.hueslide);
+            this.Material.SetFloat("_Hue", this.hueslide);
         }
     }
 
@@ -44,11 +44,16 @@ public class Item : MonoBehaviour
         this.isAnomaly = true;
         this.gameObject.tag= "Anomaly";
         anomalyAction.Execute(this);
+        Debug.Log(anomalyAction + ": " + this.gameObject.name);
     }
 
     public void PickUp()
     {
         this.isAnomaly = false;
+        this.transform.position.Set(this.definedPosition.x, this.definedPosition.y, this.definedPosition.z);
+        this.transform.rotation = this.definedRotation;
+        this.transform.localScale = this.definedScale;
+        GetComponent<MeshRenderer> ().material = Material;
         if (isDuplicat)
         {
             Destroy(this.gameObject);

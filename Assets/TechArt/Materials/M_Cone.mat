@@ -50,7 +50,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Hue: 1
+    - _Hue: 0.0019999992
     - _Metalness: 0
     - _QueueControl: 0
     - _QueueOffset: 0

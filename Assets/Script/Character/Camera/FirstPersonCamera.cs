@@ -8,10 +8,10 @@ public class FirstPersonCamera : MonoBehaviour
 
     [Header("Settings")]
     public bool isInvertedY = true;
-    public float sensitivity = 9f;
+    public float sensitivity = 6f;
     private float yaw = .0f;
     private float pitch = .0f;
-    public Vector2 pitchLimits = new Vector2(-40.0f, 80.0f);
+    public Vector2 pitchLimits = new Vector2(-120.0f, 160.0f);
     public void Update()
     {
         yaw += PlayerControler.lookInputValue.x * sensitivity;
