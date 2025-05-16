@@ -93,7 +93,6 @@ public class PlayerControler : MonoBehaviour
 
         Vector3 velocity = x + z;
         character.Move(velocity * Time.deltaTime);
-        telekinesis.ButtonPress = IsInteract;
         //float AnimSpeed = velocity.magnitude;
         //AnimSpeed = Mathf.Clamp(AnimSpeed, 0.0f, 1.0f);
         //animator.SetFloat(Animator.StringToHash("Speed"), AnimSpeed);
