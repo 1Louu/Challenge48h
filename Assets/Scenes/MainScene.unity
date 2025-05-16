@@ -2473,12 +2473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34576cce65446e04287913ec72b14114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdPosition: {fileID: 237322110}
-  grabSpeed: 10
-  throwForce: 10
   raycastDistance: 3
-  ButtonPress: 0
-  isThrowing: 0
   character: {fileID: 663683300}
   playerControler: {fileID: 663683301}
   anomalyManager: {fileID: 1070611352}
@@ -3544,6 +3539,7 @@ MonoBehaviour:
   difficulty: 1
   character: {fileID: 663683300}
   nonAnomaly: {fileID: 1070611350}
+  timerText: {fileID: 1701782034}
 --- !u!1001 &1074324888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5071,9 +5067,9 @@ RectTransform:
   - {fileID: 2037330327}
   m_Father: {fileID: 1383347352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -485, y: 276}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 166, y: -23.997}
   m_SizeDelta: {x: 351.9788, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693126941
@@ -5195,10 +5191,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1383347352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 529, y: 265.84}
-  m_SizeDelta: {x: 223.9654, y: 68.3265}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -122, y: -34.160004}
+  m_SizeDelta: {x: 223.9654, y: 68.32651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701782034
 MonoBehaviour:

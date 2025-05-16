@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class AnomalyManager : ItemManager
@@ -7,6 +8,8 @@ public class AnomalyManager : ItemManager
     public int difficulty = 1;
     public Character character; 
     public ItemManager nonAnomaly;
+
+    public TextMeshProUGUI timerText; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +20,7 @@ public class AnomalyManager : ItemManager
     void  Update()
     {
         anomalyTimer -= Time.deltaTime;
+        timerText.text = anomalyTimer.ToString();
         if (anomalyTimer <= 0)
         {
             anomalyTimer = anomalyInterval * difficulty;
