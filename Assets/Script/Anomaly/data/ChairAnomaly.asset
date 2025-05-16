@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ChairAnomaly
   m_EditorClassIdentifier: 
   definedPosition: {x: 1.215, y: 0.416, z: -1.634}
-  definedRotation: {x: 0.16664152, y: 0.8324124, z: -0.39482242, w: 0.3513338}
+  definedRotation: {x: -0.39482245, y: 0.35133377, z: -0.1666415, w: -0.8324124}
   definedScale: {x: 3.1779, y: 3.1779, z: 3.1779}

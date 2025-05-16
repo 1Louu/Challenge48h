@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 22dcd9a78b41e2444a8ab26a2608d7bb
+guid: c9c75aa1773de0a4787e1db3ae9950eb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Palette_02
-    second: {fileID: 2100000, guid: 7ab0f6ddf2e3fe046bfd69beee45a9d3, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -102,7 +97,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

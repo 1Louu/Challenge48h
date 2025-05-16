@@ -53,7 +53,8 @@ public class Item : MonoBehaviour
         this.transform.position.Set(this.definedPosition.x, this.definedPosition.y, this.definedPosition.z);
         this.transform.rotation = this.definedRotation;
         this.transform.localScale = this.definedScale;
-        GetComponent<MeshRenderer> ().material = Material;
+        if(Material != null)
+            GetComponent<MeshRenderer> ().material = Material;
         if (isDuplicat)
         {
             Destroy(this.gameObject);
