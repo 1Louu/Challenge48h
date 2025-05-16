@@ -10,7 +10,6 @@ public class Item : MonoBehaviour
     [Header("Anomaly")]
     public AnomalyAction anomalyAction;
     public bool isAnomaly;
-    public float anomalySelfTest;  
     public Material anomalyMaterial;
     
     [Header("Definied Basis")]
@@ -21,7 +20,7 @@ public class Item : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        this.transform.position = this.definedPosition;
+        this.transform.position.Set(this.definedPosition.x, this.definedPosition.y, this.definedPosition.z);
         this.transform.rotation = this.definedRotation;
         this.transform.localScale = this.definedScale;
     }
@@ -29,12 +28,7 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.anomalySelfTest -= Time.deltaTime;
-
-        if (this.anomalySelfTest <= 0 && !this.isAnomaly)
-        {
-            SetAnomaly();
-        }
+        
     }
 
     public void PickUp()
@@ -57,7 +51,6 @@ public class Item : MonoBehaviour
 
     public void ChangeText(float newValue)
     {
-        Debug.Log("SetAnomaly");
         this.anomalyMaterial.SetFloat("_TextureBlending", newValue);
     }
 }
