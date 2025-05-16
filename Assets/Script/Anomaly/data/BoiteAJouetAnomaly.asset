@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e35dcebb61c45649b6a857959d12fec, type: 3}
   m_Name: BoiteAJouetAnomaly
   m_EditorClassIdentifier: 
-  TextureBlending: 0
+  TextureBlending: 1
+  Hue: 0.2
