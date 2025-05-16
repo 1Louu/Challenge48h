@@ -15,6 +15,8 @@ public class Telekinesis1 : MonoBehaviour
     public bool isThrowing = false;
     public Character character;
     public PlayerControler playerControler;
+    
+    public AnomalyManager anomalyManager;
     //public Animator animator;
     void Start()
     {
@@ -34,7 +36,6 @@ public class Telekinesis1 : MonoBehaviour
         {
             {
                 {
-                    Debug.Log("Test");
                     RaycastHit hit;
                     Ray ray = Camera.main.ViewportPointToRay(new Vector3(0, 0, 0));
                     if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, raycastDistance))
@@ -42,7 +43,14 @@ public class Telekinesis1 : MonoBehaviour
                         Debug.DrawRay(ray.direction, hit.point, Color.yellow);
                         if (hit.collider.CompareTag("Anomaly"))
                         {
-                            TryGrabObject(hit.collider.gameObject);
+                            Item var = hit.collider.gameObject.GetComponent<Item>();
+                            var.PickUp(); 
+                            anomalyManager.RemoveAnomaly(var);
+                        }
+
+                        if (hit.collider.CompareTag("normal"))
+                        {
+                            character.LooseLife();
                         }
                     }
 

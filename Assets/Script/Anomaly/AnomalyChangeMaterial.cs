@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AnomalyChangeTexture", menuName = "Scriptable Objects/AnomalyChangeTexture")]
-public class AnomalyChangeM : AnomalyAction
+[CreateAssetMenu(fileName = "AnomalyChangeMaterial1", menuName = "Anomaly/AnomalyChangeMaterial1")]
+public class AnomalyChangeMaterial : AnomalyAction
 {
-    public float TextureBlending;
-    public float Hue;
+    public Material material;
 
     public override void Execute(Item me)
     {
-        me.anomalyMaterial.SetFloat("_TextureBlending", TextureBlending);
-        me.anomalyMaterial.SetFloat("_Hue", Hue);
+        me.GetComponent<MeshRenderer> ().material = material;
+        Debug.Log ("AnomalyChangeMaterial executed");
     }
+
 }
