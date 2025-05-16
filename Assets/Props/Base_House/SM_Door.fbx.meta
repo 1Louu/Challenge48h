@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 8e810aa3d40e57d4585c50fd1385a73b
+guid: c116ae449a9cd9d42b19510abbe75be2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: test_gradient1
-    second: {fileID: 7738759167502035605, guid: 7cf8e846896107b4d9905e5f9a87accf, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
