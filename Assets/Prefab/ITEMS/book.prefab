@@ -105,8 +105,7 @@ MonoBehaviour:
   DifficultyType: 0
   anomalyAction: {fileID: 0}
   isAnomaly: 0
-  anomalySelfTest: 0
   anomalyMaterial: {fileID: 0}
   definedPosition: {x: 0, y: 0, z: 0}
   definedRotation: {x: 0, y: 0, z: 0, w: 0}
-  definedScale: {x: 0, y: 0, z: 0}
+  definedScale: {x: 1, y: 1, z: 1}

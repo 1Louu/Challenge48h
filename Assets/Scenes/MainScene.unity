@@ -935,7 +935,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1070611351}
   - component: {fileID: 1070611350}
-  - component: {fileID: 1070611353}
   - component: {fileID: 1070611352}
   m_Layer: 0
   m_Name: ItemManager
@@ -957,8 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 273876219228164645, guid: 5abeb52453c786546b5aee58693ce8d2, type: 3}
-  anomalyInterval: 0
+  - {fileID: -3747726551858034416, guid: 213c4fcaa4bc5704f80ba6c61480c391, type: 3}
 --- !u!4 &1070611351
 Transform:
   m_ObjectHideFlags: 0
@@ -988,20 +986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items: []
   anomalyInterval: 0
---- !u!114 &1070611353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070611349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdd6344ad7f92184fabd22f56fdfd4f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Items: []
-  anomalyInterval: 0
+  nonAnomaly: {fileID: 0}
 --- !u!4 &1390337887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3165363871382091080, guid: d9cc03c9246d69b4bae2b40c8952cb9d, type: 3}
