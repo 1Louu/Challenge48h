@@ -4,7 +4,6 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public Rigidbody rb;
-    public float bulletSpeed = 20f;
     public float speed = 1f;
     public Camera PlayerCamera;
     public void Move(Vector3 velocity)
